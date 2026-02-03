@@ -1,3 +1,5 @@
+suhyeon: Forked and modified version of NaoHTWK/WhistleDetection for mono audio.
+
 Please compile it as every other CMake program. When starting please provide 
 the path to the data directory in the NAO_TFLITE_PATH environment variable. 
 The path is used to determine where the ML model is stored.
