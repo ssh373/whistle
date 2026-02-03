@@ -66,8 +66,10 @@ void SoundCapturing::process(std::string device_name) {
         return;
     }
     printf("Requested period %d, got %ld.\n", TFLiteWhistleDetection::req_frame_size, req_frame_size);
-    TFLiteWhistleDetection whistle_detection_left;
-    TFLiteWhistleDetection whistle_detection_right;
+    // TFLiteWhistleDetection whistle_detection_left;
+    // TFLiteWhistleDetection whistle_detection_right;
+    TFLiteWhistleDetection whistle_detection;
+
 
     /* Write the parameters to the driver */
     rc = snd_pcm_hw_params(handle, params);
@@ -93,9 +95,6 @@ void SoundCapturing::process(std::string device_name) {
         return;
     }
 
-    int counter;
-    std::vector<std::vector<short>> channels(num_channels, std::vector<short>(req_frame_size));
-
     while (true) {
         rc = snd_pcm_readi(handle, buffer.data(), req_frame_size);
         if (rc == -EPIPE) {
@@ -108,16 +107,7 @@ void SoundCapturing::process(std::string device_name) {
             fprintf(stderr, "short read, read %d frames\n", rc);
         }
 
-        counter = 0;
-        for (size_t i = 0; i < buffer.size(); i += num_channels) {
-            for (size_t j = 0; j < num_channels; j++) {
-                channels[j][counter] = buffer[i + j];
-            }
-            counter++;
-        }
-
-        if (whistle_detection_left.process(channels[MIC_LEFT_FRONT]) ||
-            whistle_detection_left.process(channels[MIC_RIGHT_FRONT])) {
+        if (whistle_detection.process(buffer)) {
             printf("Whistle detected! This can trigger multiple time.\n");
             fflush(stdout);
         }

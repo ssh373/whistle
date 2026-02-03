@@ -12,7 +12,7 @@ public:
 
     constexpr static uint32_t req_rate = 44100;
     constexpr static uint32_t req_frame_size = 441;
-    constexpr static uint32_t num_channels = 2;
+    constexpr static uint32_t num_channels = 1;
 
     constexpr static size_t frame_size = 384;
     constexpr static int ffts_per_patch = 12;
