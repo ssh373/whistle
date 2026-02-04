@@ -144,7 +144,7 @@ std::string TFLiteExecuter::getTFliteModelPath() {
             return tflitePath;
         }
 
-        tflitePath = "/home/booster/Workspace/whistle/data/tflite";
+        tflitePath = "/home/booster/Workspace/whistle/data";
 
         if (boost::filesystem::exists(tflitePath)) {
             return tflitePath;
