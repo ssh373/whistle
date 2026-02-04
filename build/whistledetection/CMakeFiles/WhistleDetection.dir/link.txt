@@ -1,0 +1,2 @@
+/usr/bin/ar qc libWhistleDetection.a CMakeFiles/WhistleDetection.dir/tflitewhistledetection.cpp.o
+/usr/bin/ranlib libWhistleDetection.a
