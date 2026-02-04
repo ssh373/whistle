@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK
 
-CXX_INCLUDES = -I/home/usr/Workspace/whistle/soundcapturing/. -I/home/usr/Workspace/whistle/whistledetection/. -I/home/usr/Workspace/whistle/tfliteexecuter/. -I/home/usr/Workspace/whistle/tfliteexecuter/../3rdparty/tflite -I/home/usr/Workspace/whistle/tfliteexecuter/../3rdparty/tflite/aarch64/include
+CXX_INCLUDES = -I/home/usr/Workspace/whistle/whistledetection/. -I/home/usr/Workspace/whistle/tfliteexecuter/. -I/home/usr/Workspace/whistle/soundcapturing/. -isystem /home/usr/Workspace/whistle/3rdparty/tflite/include
 
 CXX_FLAGS = 
 

@@ -1,7 +1,6 @@
 #include "tfliteexecuter.h"
-
-#include <tflite_c_api.h>
-#include <tflite_c_api_xnnpack_delegate.h>
+#include "tensorflow/lite/c/c_api.h"
+#include "tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h"
 
 #include <boost/filesystem.hpp>
 #include <cstdio>

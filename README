@@ -1,11 +1,12 @@
 suhyeon: Forked and modified version of NaoHTWK/WhistleDetection for mono audio.
 
+for K1, for aarch64 ...
+
 Please compile it as every other CMake program. When starting please provide 
-the path to the data directory in the NAO_TFLITE_PATH environment variable. 
+the path to the data directory in the *NAO_TFLITE_PATH* environment variable. 
 The path is used to determine where the ML model is stored.
 
 For dependencies you need CMake and a C++ compiler like GCC or Clang. Install the following packages for libraries:
- * on Arch Linux: fftw alsa-lib
  * on Debian and their children: libfftw3-dev libasound2-dev
 
 License AGPL. Made with C++, TFLite and ❤.

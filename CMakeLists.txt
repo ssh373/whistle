@@ -14,8 +14,22 @@ add_executable(${PROJECT_NAME}
     example.cpp
 )
 
+set(TFLITE_ROOT "${CMAKE_SOURCE_DIR}/3rdparty/tflite")
+
+add_library(tflite_c SHARED IMPORTED GLOBAL)
+set_target_properties(tflite_c PROPERTIES
+  IMPORTED_LOCATION "${TFLITE_ROOT}/lib/libtensorflowlite_c.so"
+)
+target_include_directories(tflite_c INTERFACE
+  "${TFLITE_ROOT}/include"
+)
+
+
 target_link_libraries(${PROJECT_NAME}
+    WhistleDetection
     SoundCapturing
+    tfliteexecuter
+    tflite_c
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17)

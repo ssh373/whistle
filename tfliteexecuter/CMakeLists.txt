@@ -37,11 +37,16 @@ target_include_directories(tflite INTERFACE
 )
 
 # Link your library against TF Lite .so
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_link_libraries(${PROJECT_NAME} PUBLIC
     ${LIBS}
-    tflite
+    tflite_c
     Boost::filesystem
     ${CMAKE_DL_LIBS}
+)
+
+target_link_options(${PROJECT_NAME} PRIVATE
+    "-Wl,--no-as-needed"
+    "-Wl,--no-undefined"
 )
 
 # Your local headers

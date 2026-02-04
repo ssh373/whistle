@@ -131,9 +131,9 @@ whistledetection/clean: whistledetection/CMakeFiles/WhistleDetection.dir/clean
 # Target rules for target CMakeFiles/WhistleDetectionRelease.dir
 
 # All Build rule for target.
-CMakeFiles/WhistleDetectionRelease.dir/all: whistledetection/CMakeFiles/WhistleDetection.dir/all
 CMakeFiles/WhistleDetectionRelease.dir/all: tfliteexecuter/CMakeFiles/tfliteexecuter.dir/all
 CMakeFiles/WhistleDetectionRelease.dir/all: soundcapturing/CMakeFiles/SoundCapturing.dir/all
+CMakeFiles/WhistleDetectionRelease.dir/all: whistledetection/CMakeFiles/WhistleDetection.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WhistleDetectionRelease.dir/build.make CMakeFiles/WhistleDetectionRelease.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WhistleDetectionRelease.dir/build.make CMakeFiles/WhistleDetectionRelease.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/usr/Workspace/whistle/build/CMakeFiles --progress-num=5,6 "Built target WhistleDetectionRelease"
@@ -185,8 +185,8 @@ whistledetection/CMakeFiles/WhistleDetection.dir/clean:
 # Target rules for target soundcapturing/CMakeFiles/SoundCapturing.dir
 
 # All Build rule for target.
-soundcapturing/CMakeFiles/SoundCapturing.dir/all: whistledetection/CMakeFiles/WhistleDetection.dir/all
 soundcapturing/CMakeFiles/SoundCapturing.dir/all: tfliteexecuter/CMakeFiles/tfliteexecuter.dir/all
+soundcapturing/CMakeFiles/SoundCapturing.dir/all: whistledetection/CMakeFiles/WhistleDetection.dir/all
 	$(MAKE) $(MAKESILENT) -f soundcapturing/CMakeFiles/SoundCapturing.dir/build.make soundcapturing/CMakeFiles/SoundCapturing.dir/depend
 	$(MAKE) $(MAKESILENT) -f soundcapturing/CMakeFiles/SoundCapturing.dir/build.make soundcapturing/CMakeFiles/SoundCapturing.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/usr/Workspace/whistle/build/CMakeFiles --progress-num=1,2 "Built target SoundCapturing"

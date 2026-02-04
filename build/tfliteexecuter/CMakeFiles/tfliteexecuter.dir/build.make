@@ -92,7 +92,7 @@ tfliteexecuter_EXTERNAL_OBJECTS =
 
 tfliteexecuter/libtfliteexecuter.so: tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o
 tfliteexecuter/libtfliteexecuter.so: tfliteexecuter/CMakeFiles/tfliteexecuter.dir/build.make
-tfliteexecuter/libtfliteexecuter.so: ../tfliteexecuter/../3rdparty/tflite/aarch64/lib/libtensorflow-lite.a
+tfliteexecuter/libtfliteexecuter.so: ../3rdparty/tflite/lib/libtensorflowlite_c.so
 tfliteexecuter/libtfliteexecuter.so: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.74.0
 tfliteexecuter/libtfliteexecuter.so: tfliteexecuter/CMakeFiles/tfliteexecuter.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usr/Workspace/whistle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libtfliteexecuter.so"

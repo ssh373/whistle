@@ -158,12 +158,19 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  ../3rdparty/tflite/tflite_c_api.h \
-  /usr/include/c++/11/stdlib.h \
-  ../3rdparty/tflite/tflite_c_api_common.h \
+  ../3rdparty/tflite/include/tensorflow/lite/c/c_api.h \
+  ../3rdparty/tflite/include/tensorflow/lite/core/c/c_api.h \
   /usr/lib/gcc/aarch64-linux-gnu/11/include/stdbool.h \
-  ../3rdparty/tflite/tflite_c_api_types.h \
-  ../3rdparty/tflite/tflite_c_api_xnnpack_delegate.h \
+  /usr/include/c++/11/stdlib.h \
+  ../3rdparty/tflite/include/tensorflow/lite/builtin_ops.h \
+  ../3rdparty/tflite/include/tensorflow/lite/core/async/c/types.h \
+  ../3rdparty/tflite/include/tensorflow/lite/core/c/c_api_types.h \
+  ../3rdparty/tflite/include/tensorflow/compiler/mlir/lite/core/c/tflite_types.h \
+  ../3rdparty/tflite/include/tensorflow/lite/core/c/operator.h \
+  ../3rdparty/tflite/include/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h \
+  ../3rdparty/tflite/include/tensorflow/lite/core/c/common.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/boost/filesystem.hpp \
   /usr/include/boost/filesystem/config.hpp \
   /usr/include/boost/config.hpp \
@@ -237,8 +244,6 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/array \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/invoke.h \
@@ -573,8 +578,6 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/boost/mpl/aux_/config/has_apply.hpp:
 
-/usr/include/boost/preprocessor/repetition/enum_params.hpp:
-
 /usr/include/boost/preprocessor/array/size.hpp:
 
 /usr/include/boost/preprocessor/array/elem.hpp:
@@ -640,6 +643,8 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 /usr/include/boost/mpl/eval_if.hpp:
 
 /usr/include/boost/iterator/iterator_categories.hpp:
+
+/usr/include/boost/iterator/detail/config_def.hpp:
 
 /usr/include/boost/type_traits/add_reference.hpp:
 
@@ -747,8 +752,6 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/boost/mpl/aux_/config/nttp.hpp:
 
-/usr/include/boost/mpl/aux_/nttp_decl.hpp:
-
 /usr/include/boost/mpl/aux_/config/lambda.hpp:
 
 /usr/include/boost/mpl/aux_/na.hpp:
@@ -855,6 +858,16 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/strings.h:
 
+/usr/include/boost/mpl/void.hpp:
+
+/usr/include/boost/mpl/aux_/config/ctps.hpp:
+
+/usr/include/c++/11/cstring:
+
+/usr/include/c++/11/pstl/execution_defs.h:
+
+/usr/include/c++/11/bits/algorithmfwd.h:
+
 /usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/boost/mpl/aux_/config/intel.hpp:
@@ -899,6 +912,8 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/aarch64-linux-gnu/bits/struct_mutex.h:
 
+/usr/include/aarch64-linux-gnu/bits/types.h:
+
 /usr/include/aarch64-linux-gnu/bits/setjmp.h:
 
 /usr/include/boost/mpl/apply_fwd.hpp:
@@ -920,6 +935,10 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/c++/11/bits/allocator.h:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
+/usr/include/c++/11/bits/std_function.h:
 
 /usr/include/boost/mpl/aux_/config/ttp.hpp:
 
@@ -1014,6 +1033,8 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 /usr/include/boost/type_traits/remove_bounds.hpp:
 
 /usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/11/bits/stringfwd.h:
 
 /usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
 
@@ -1149,8 +1170,6 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/aarch64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h:
-
 /usr/include/c++/11/bits/predefined_ops.h:
 
 /usr/include/boost/type_traits/is_enum.hpp:
@@ -1160,10 +1179,6 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h:
 
 /usr/include/aarch64-linux-gnu/bits/waitflags.h:
-
-/usr/include/c++/11/pstl/execution_defs.h:
-
-/usr/include/c++/11/bits/algorithmfwd.h:
 
 /usr/include/c++/11/fstream:
 
@@ -1251,12 +1266,6 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/aarch64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/boost/mpl/void.hpp:
-
-/usr/include/boost/mpl/aux_/config/ctps.hpp:
-
-/usr/include/c++/11/cstring:
-
 /usr/include/aarch64-linux-gnu/c++/11/bits/basic_file.h:
 
 /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
@@ -1291,13 +1300,15 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/aarch64-linux-gnu/bits/types/locale_t.h:
 
+/usr/include/boost/mpl/aux_/config/eti.hpp:
+
+/usr/include/boost/config/compiler/gcc.hpp:
+
 /usr/include/boost/filesystem/path_traits.hpp:
 
 /usr/include/wchar.h:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/11/ext/type_traits.h:
 
 /usr/include/c++/11/bits/stl_pair.h:
 
@@ -1325,11 +1336,17 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/aarch64-linux-gnu/bits/uintn-identity.h:
 
+/usr/include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h:
+
+../3rdparty/tflite/include/tensorflow/lite/core/c/c_api.h:
+
 /usr/include/boost/config/no_tr1/functional.hpp:
 
 /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h:
 
 /usr/include/aarch64-linux-gnu/sys/select.h:
+
+../3rdparty/tflite/include/tensorflow/lite/core/c/operator.h:
 
 /usr/include/boost/mpl/aux_/config/adl.hpp:
 
@@ -1342,6 +1359,12 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 /usr/include/aarch64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/boost/config/platform/linux.hpp:
+
+/usr/include/c++/11/bits/stl_heap.h:
+
+/usr/include/aarch64-linux-gnu/bits/long-double.h:
+
+/usr/include/c++/11/bits/std_abs.h:
 
 /usr/include/boost/mpl/int_fwd.hpp:
 
@@ -1397,29 +1420,47 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/c++/11/bits/vector.tcc:
 
-/usr/include/boost/iterator/detail/config_def.hpp:
-
-../3rdparty/tflite/tflite_c_api.h:
-
-/usr/include/c++/11/stdlib.h:
-
-/usr/include/c++/11/bits/stringfwd.h:
-
-../3rdparty/tflite/tflite_c_api_common.h:
+../3rdparty/tflite/include/tensorflow/lite/c/c_api.h:
 
 /usr/include/boost/type_traits/detail/yes_no_type.hpp:
 
 /usr/lib/gcc/aarch64-linux-gnu/11/include/stdbool.h:
 
-/usr/include/boost/mpl/aux_/config/eti.hpp:
+/usr/include/c++/11/stdlib.h:
 
-/usr/include/boost/config/compiler/gcc.hpp:
+../3rdparty/tflite/include/tensorflow/lite/core/async/c/types.h:
 
-../3rdparty/tflite/tflite_c_api_types.h:
+/usr/include/c++/11/ostream:
 
-/usr/include/aarch64-linux-gnu/bits/types.h:
+/usr/include/c++/11/ext/type_traits.h:
 
-../3rdparty/tflite/tflite_c_api_xnnpack_delegate.h:
+../3rdparty/tflite/include/tensorflow/lite/core/c/c_api_types.h:
+
+/usr/include/boost/preprocessor/variadic/elem.hpp:
+
+/usr/include/c++/11/bits/codecvt.h:
+
+/usr/include/c++/11/bits/basic_ios.tcc:
+
+/usr/include/c++/11/bits/enable_special_members.h:
+
+/usr/include/boost/mpl/aux_/nttp_decl.hpp:
+
+../3rdparty/tflite/include/tensorflow/compiler/mlir/lite/core/c/tflite_types.h:
+
+/usr/include/boost/mpl/aux_/config/gpu.hpp:
+
+/usr/include/boost/config/workaround.hpp:
+
+/usr/include/c++/11/bits/node_handle.h:
+
+../3rdparty/tflite/include/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h:
+
+/usr/include/boost/preprocessor/repetition/enum_params.hpp:
+
+../3rdparty/tflite/include/tensorflow/lite/core/c/common.h:
+
+/usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/boost/filesystem.hpp:
 
@@ -1489,8 +1530,6 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/boost/cstdint.hpp:
 
-/usr/include/c++/11/ostream:
-
 /usr/include/boost/mpl/aux_/has_apply.hpp:
 
 /usr/include/c++/11/utility:
@@ -1512,6 +1551,8 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 /usr/include/aarch64-linux-gnu/c++/11/bits/error_constants.h:
 
 /usr/include/c++/11/pstl/glue_algorithm_defs.h:
+
+../3rdparty/tflite/include/tensorflow/lite/builtin_ops.h:
 
 /usr/include/c++/11/stdexcept:
 
@@ -1545,8 +1586,6 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/aarch64-linux-gnu/c++/11/bits/ctype_inline.h:
 
-/usr/include/c++/11/bits/stl_relops.h:
-
 /usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
 
 /usr/include/c++/11/array:
@@ -1569,32 +1608,8 @@ tfliteexecuter/CMakeFiles/tfliteexecuter.dir/tfliteexecuter.cpp.o: ../tfliteexec
 
 /usr/include/c++/11/bits/hashtable_policy.h:
 
-/usr/include/boost/preprocessor/variadic/elem.hpp:
-
-/usr/include/c++/11/bits/codecvt.h:
-
-/usr/include/c++/11/bits/basic_ios.tcc:
-
-/usr/include/c++/11/bits/enable_special_members.h:
-
-/usr/include/boost/mpl/aux_/config/gpu.hpp:
-
-/usr/include/boost/config/workaround.hpp:
-
-/usr/include/c++/11/bits/node_handle.h:
-
 /usr/include/c++/11/bits/unordered_map.h:
 
 /usr/include/boost/preprocessor/debug/error.hpp:
 
 /usr/include/c++/11/bits/stl_algo.h:
-
-/usr/include/aarch64-linux-gnu/bits/long-double.h:
-
-/usr/include/c++/11/bits/std_abs.h:
-
-/usr/include/c++/11/bits/stl_heap.h:
-
-/usr/include/c++/11/bits/std_function.h:
-
-/usr/include/c++/11/bits/stl_tempbuf.h:

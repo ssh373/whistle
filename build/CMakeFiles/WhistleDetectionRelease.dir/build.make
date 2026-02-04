@@ -92,10 +92,11 @@ WhistleDetectionRelease_EXTERNAL_OBJECTS =
 
 WhistleDetectionRelease: CMakeFiles/WhistleDetectionRelease.dir/example.cpp.o
 WhistleDetectionRelease: CMakeFiles/WhistleDetectionRelease.dir/build.make
+WhistleDetectionRelease: whistledetection/libWhistleDetection.a
 WhistleDetectionRelease: soundcapturing/libSoundCapturing.a
 WhistleDetectionRelease: whistledetection/libWhistleDetection.a
 WhistleDetectionRelease: tfliteexecuter/libtfliteexecuter.so
-WhistleDetectionRelease: ../tfliteexecuter/../3rdparty/tflite/aarch64/lib/libtensorflow-lite.a
+WhistleDetectionRelease: ../3rdparty/tflite/lib/libtensorflowlite_c.so
 WhistleDetectionRelease: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.74.0
 WhistleDetectionRelease: CMakeFiles/WhistleDetectionRelease.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usr/Workspace/whistle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable WhistleDetectionRelease"
