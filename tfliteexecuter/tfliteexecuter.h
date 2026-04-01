@@ -6,7 +6,6 @@
 #include <vector>
 
 struct TfLiteInterpreter;
-struct TfLiteDelegate;
 
 namespace htwk {
 
@@ -37,7 +36,6 @@ public:
 
 private:
     TfLiteInterpreter* interpreter = nullptr;
-    TfLiteDelegate* delegate = nullptr;
 };
 
 }

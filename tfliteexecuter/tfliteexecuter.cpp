@@ -1,6 +1,5 @@
 #include "tfliteexecuter.h"
 #include "tflite_c_api.h"
-#include "tflite_c_api_xnnpack_delegate.h"
 
 #include <cstdio>
 #include <cstdlib>
@@ -28,7 +27,6 @@ namespace htwk {
 
 TFLiteExecuter::~TFLiteExecuter() {
     TfLiteInterpreterDelete(interpreter);
-    TfLiteXNNPackDelegateDelete(delegate);
 }
 
 void TFLiteExecuter::loadModelFromFile(std::string file, std::vector<int> inputDims, int numThreads) {
@@ -43,15 +41,9 @@ void TFLiteExecuter::loadModelFromFile(std::string file, std::vector<int> inputD
         exit(1);
     }
 
-    TfLiteXNNPackDelegateOptions xnnPackDelegateOption = TfLiteXNNPackDelegateOptionsDefault();
-    xnnPackDelegateOption.num_threads = numThreads;
-    delegate = TfLiteXNNPackDelegateCreate(&xnnPackDelegateOption);
-    MY_ASSERT_NE(delegate, nullptr);
-
     TfLiteInterpreterOptions* options = TfLiteInterpreterOptionsCreate();
     MY_ASSERT_NE(options, nullptr);
     TfLiteInterpreterOptionsSetNumThreads(options, numThreads);
-    TfLiteInterpreterOptionsAddDelegate(options, delegate);
 
     interpreter = TfLiteInterpreterCreate(model, options);
     MY_ASSERT_NE(interpreter, nullptr);
@@ -80,14 +72,9 @@ void TFLiteExecuter::loadModelFromArray(const void* modelData, size_t length, st
     TfLiteModel* model = TfLiteModelCreate(modelData, length);
     MY_ASSERT_NE(model, nullptr);
 
-    TfLiteXNNPackDelegateOptions xnnPackDelegateOption = TfLiteXNNPackDelegateOptionsDefault();
-    delegate = TfLiteXNNPackDelegateCreate(&xnnPackDelegateOption);
-    MY_ASSERT_NE(delegate, nullptr);
-
     TfLiteInterpreterOptions* options = TfLiteInterpreterOptionsCreate();
     MY_ASSERT_NE(options, nullptr);
     TfLiteInterpreterOptionsSetNumThreads(options, numThreads);
-    TfLiteInterpreterOptionsAddDelegate(options, delegate);
 
     interpreter = TfLiteInterpreterCreate(model, options);
     MY_ASSERT_NE(interpreter, nullptr);
