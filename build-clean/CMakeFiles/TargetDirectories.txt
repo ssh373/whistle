@@ -1,0 +1,12 @@
+/home/user/Workspace/whistle/build-clean/CMakeFiles/WhistleDetectionRelease.dir
+/home/user/Workspace/whistle/build-clean/CMakeFiles/edit_cache.dir
+/home/user/Workspace/whistle/build-clean/CMakeFiles/rebuild_cache.dir
+/home/user/Workspace/whistle/build-clean/whistledetection/CMakeFiles/WhistleDetection.dir
+/home/user/Workspace/whistle/build-clean/whistledetection/CMakeFiles/edit_cache.dir
+/home/user/Workspace/whistle/build-clean/whistledetection/CMakeFiles/rebuild_cache.dir
+/home/user/Workspace/whistle/build-clean/soundcapturing/CMakeFiles/SoundCapturing.dir
+/home/user/Workspace/whistle/build-clean/soundcapturing/CMakeFiles/edit_cache.dir
+/home/user/Workspace/whistle/build-clean/soundcapturing/CMakeFiles/rebuild_cache.dir
+/home/user/Workspace/whistle/build-clean/tfliteexecuter/CMakeFiles/tfliteexecuter.dir
+/home/user/Workspace/whistle/build-clean/tfliteexecuter/CMakeFiles/edit_cache.dir
+/home/user/Workspace/whistle/build-clean/tfliteexecuter/CMakeFiles/rebuild_cache.dir

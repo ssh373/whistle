@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(tfliteexecuter)
 
-find_package(Boost COMPONENTS filesystem REQUIRED QUIET)
-
 set(LIBS
     stdc++
     rt
@@ -16,31 +14,17 @@ add_library(${PROJECT_NAME} SHARED
 )
 
 # =========================================================
-# TF Lite (Bazel-built shared library, single .so)
+# TF Lite (C API shared library)
 # =========================================================
-# 3rdparty layout (recommended):
-#   ../3rdparty/tflite/lib/libtensorflowlite.so
-#   ../3rdparty/tflite/include/...
+# 3rdparty layout:
+#   ../3rdparty/tflite/lib/libtensorflowlite_c.so
+#   ../3rdparty/tflite/tflite_c_api*.h
 set(TFLITE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../3rdparty/tflite")
-
-add_library(tflite SHARED IMPORTED GLOBAL)
-set_target_properties(tflite PROPERTIES
-    IMPORTED_LOCATION "${TFLITE_ROOT}/lib/libtensorflowlite.so"
-)
-
-# One include root that contains:
-#   tensorflow/...
-#   absl/...
-#   flatbuffers/...
-target_include_directories(tflite INTERFACE
-    "${TFLITE_ROOT}/include"
-)
 
 # Link your library against TF Lite .so
 target_link_libraries(${PROJECT_NAME} PUBLIC
     ${LIBS}
     tflite_c
-    Boost::filesystem
     ${CMAKE_DL_LIBS}
 )
 

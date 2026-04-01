@@ -1,10 +1,10 @@
 #include "tfliteexecuter.h"
-#include "tensorflow/lite/c/c_api.h"
-#include "tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h"
+#include "tflite_c_api.h"
+#include "tflite_c_api_xnnpack_delegate.h"
 
-#include <boost/filesystem.hpp>
 #include <cstdio>
 #include <cstdlib>
+#include <filesystem>
 
 #define MY_ASSERT_NE(v, e)                                                                        \
     do {                                                                                          \
@@ -132,6 +132,7 @@ void TFLiteExecuter::execute() {
 }
 
 std::string TFLiteExecuter::getTFliteModelPath() {
+    namespace fs = std::filesystem;
     char* val = getenv("NAO_TFLITE_PATH");
     std::string tflitePath;
 
@@ -140,13 +141,13 @@ std::string TFLiteExecuter::getTFliteModelPath() {
     } else {
         tflitePath = "data/tflite";
 
-        if (boost::filesystem::exists(tflitePath)) {
+        if (fs::exists(tflitePath)) {
             return tflitePath;
         }
 
         tflitePath = "/home/booster/Workspace/whistle/data";
 
-        if (boost::filesystem::exists(tflitePath)) {
+        if (fs::exists(tflitePath)) {
             return tflitePath;
         }
 

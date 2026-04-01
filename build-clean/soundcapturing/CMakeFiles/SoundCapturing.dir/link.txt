@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSoundCapturing.a CMakeFiles/SoundCapturing.dir/soundcapturing.cpp.o
+/usr/bin/ranlib libSoundCapturing.a

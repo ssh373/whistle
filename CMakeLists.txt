@@ -21,7 +21,7 @@ set_target_properties(tflite_c PROPERTIES
   IMPORTED_LOCATION "${TFLITE_ROOT}/lib/libtensorflowlite_c.so"
 )
 target_include_directories(tflite_c INTERFACE
-  "${TFLITE_ROOT}/include"
+  "${TFLITE_ROOT}"
 )
 
 
