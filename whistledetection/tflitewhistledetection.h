@@ -26,7 +26,7 @@ public:
 
     void reset();
 
-    bool detectionRunInProcess;
+    bool detectionRunInProcess = false;
 
 private:
     constexpr static size_t fft_spec_size = frame_size / 2 + 1;
@@ -39,12 +39,14 @@ private:
     int c_half_current_patch_fft = 0;
     htwk::TFLiteExecuter classifier_half;  // Starts at ffts_per_patch // 2
 
-    float* input_c_zero;
-    float* input_c_half;
+    float* input_c_zero = nullptr;
+    float* input_c_half = nullptr;
+    size_t input_c_zero_elements = 0;
+    size_t input_c_half_elements = 0;
 
     fftwf_vector<float> fft_real_buffer;
     fftwf_vector<fftwf_complex> fft_complex_buffer;
-    fftwf_plan fft_plan;
+    fftwf_plan fft_plan = nullptr;
 
     std::vector<int16_t> buffer;
     std::mutex mtx;
